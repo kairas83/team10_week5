@@ -29,14 +29,6 @@ public class AppTest
     {
         return new TestSuite( AppTest.class );
     }
-
-    /**
-     * Rigourous Test :-)
-     */
-    public void testApp()
-    {
-        assertTrue( true );
-    }
     
     public void testGoldMinuteOver1()
     {
@@ -124,21 +116,21 @@ public class AppTest
     }
     
     public void testMakePlan(){
-    	Plan plan = new Plan("Gold", 49.95, 14.50, 0.45, 1000){};
+    	Plan plan = new Plan("Gold", 0, 0, 0, 0){};
     	assertEquals("Gold", plan.planType());
-    	assertEquals(49.95, plan.basicMonthlyRate());
-    	assertEquals(14.50, plan.ratePerAdditionalLine());
-    	assertEquals(0.45, plan.ratePerExcessMinute());
-    	assertEquals(1000, plan.includedMinutes());	
+    	assertEquals(0, plan.basicMonthlyRate());
+    	assertEquals(0, plan.ratePerAdditionalLine());
+    	assertEquals(0, plan.ratePerExcessMinute());
+    	assertEquals(0, plan.includedMinutes());	
     	}
     
     public void testMakeGoldPlan(){ 
     	Gold gold = new Gold();
-    	assertEquals("Gold", gold.planType());
-    	assertEquals(49.95, gold.basicMonthlyRate());
-    	assertEquals(14.50, gold.ratePerAdditionalLine());
-    	assertEquals(0.45, gold.ratePerExcessMinute());
-    	assertEquals(1000, gold.includedMinutes());	    	
+    	assertEquals(Gold.PLAN_TYPE, gold.planType());
+    	assertEquals(Gold.BASIC_MONTHLY_RATE, gold.basicMonthlyRate());
+    	assertEquals(Gold.RATE_PER_ADDITIONAL_LINE, gold.ratePerAdditionalLine());
+    	assertEquals(Gold.RATE_PER_EXCESS_MINUTE, gold.ratePerExcessMinute());
+    	assertEquals(Gold.INCLUDED_MINUTES, gold.includedMinutes());
     }
     
     public void testMakeSilverPlan(){ 
