@@ -142,11 +142,11 @@ public class AppTest
     
     public void testMakeSilverPlan(){ 
     	Silver silver = new Silver();
-    	assertEquals("Silver", silver.planType());
-    	assertEquals(29.95, silver.basicMonthlyRate());
-    	assertEquals(21.50, silver.ratePerAdditionalLine());
-    	assertEquals(0.54, silver.ratePerExcessMinute());
-    	assertEquals(500, silver.includedMinutes());	    	
+    	assertEquals(Silver.PLAN_TYPE, silver.planType());
+    	assertEquals(Silver.BASIC_MONTHLY_RATE, silver.basicMonthlyRate());
+    	assertEquals(Silver.RATE_PER_ADDITIONAL_LINE, silver.ratePerAdditionalLine());
+    	assertEquals(Silver.RATE_PER_EXCESS_MINUTE, silver.ratePerExcessMinute());
+    	assertEquals(Silver.INCLUDED_MINUTES, silver.includedMinutes());	    	
     }
     
     public void testAccount(){
