@@ -85,4 +85,4 @@ Calculator와 Account에 저장된 정보들을 토대로 고지서를 구성합
 각각 Plan 정보들에 대한 값은 자식 클래스인 Gold, Silver 선언시 입력됩니다.
 Calculator는 내부 인자로 Plan의 자식 클래스당, 해당 객체 하나를 소유하고있어야합니다.
 
-![alt text](http://cfile1.uf.tistory.com/image/255D8B4E51ADD7CD04EF09, "optional text")
+![Alt text](http://cfile1.uf.tistory.com/image/255D8B4E51ADD7CD04EF09 "optional text")
