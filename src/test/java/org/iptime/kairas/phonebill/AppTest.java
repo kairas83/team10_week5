@@ -37,7 +37,7 @@ public class AppTest
     	assertEquals("49.95 + (0*14.5)", calc.totalCostFormular());
     }
     
-    public void testGoldMinuteOver1()
+    public void testGold999min1line()
     {
     	Calculator calc = new Calculator();
     	calc.setAccount(new Account("gold",999,1));
@@ -45,77 +45,77 @@ public class AppTest
     	assertEquals(49.95 ,calc.totalCost(), 0.05);
     }
     
-    public void testGoldMinuteOver2(){
+    public void testGold1000min1line(){
     	Calculator calc = new Calculator();
     	calc.setAccount(new Account("gold", 1000, 1));
     	calc.run();
     	assertEquals(49.95 ,calc.totalCost(), 0.05);
     }
     
-    public void testGoldMinuteOver3(){
+    public void testGold1001min1line(){
     	Calculator calc = new Calculator();
     	calc.setAccount(new Account("gold", 1001, 1));
     	calc.run();
     	assertEquals(50.40 ,calc.totalCost(), 0.05);
     }
     
-    public void testGoldMinuteOver4(){
+    public void testGold1010min1line(){
     	Calculator calc = new Calculator();
     	calc.setAccount(new Account("gold", 1010, 1));
     	calc.run();
     	assertEquals(54.45 ,calc.totalCost(), 0.05);
     }
     
-    public void testSilverMinuteOver5(){
+    public void testSilver499min1line(){
     	Calculator calc = new Calculator();
     	calc.setAccount(new Account("silver", 499, 1));
     	calc.run();
     	assertEquals(29.95 ,calc.totalCost(), 0.05);
     }
     
-    public void testSilverMinuteOver6(){
+    public void testSilver500min1line(){
     	Calculator calc = new Calculator();
     	calc.setAccount(new Account("silver", 500, 1));
     	calc.run();
     	assertEquals(29.95 ,calc.totalCost(), 0.05);
     }
     
-    public void testSilverMinuteOver7(){
+    public void testSilver520min1line(){
     	Calculator calc = new Calculator();
     	calc.setAccount(new Account("silver", 520, 1));
     	calc.run();
     	assertEquals(40.75 ,calc.totalCost(), 0.05);
     }
     
-    public void testNumberOfGoldLines1(){
+    public void testGold0min2line(){
     	Calculator calc = new Calculator();
     	calc.setAccount(new Account("gold", 0, 2));
     	calc.run();
     	assertEquals(64.45 ,calc.totalCost(), 0.05);
     }
     
-    public void testNumberOfGoldLines2(){
+    public void testGold0min3line(){
     	Calculator calc = new Calculator();
     	calc.setAccount(new Account("gold", 0, 3));
     	calc.run();
     	assertEquals(78.95 ,calc.totalCost(), 0.05);
     }
     
-    public void testNumberOfGoldLines3(){
+    public void testGold0min4line(){
     	Calculator calc = new Calculator();
     	calc.setAccount(new Account("gold", 0, 4));
     	calc.run();
     	assertEquals(83.95 ,calc.totalCost(), 0.05);
     }
     
-    public void testNumberOfSilverLines1(){
+    public void testSilver0min4line(){
     	Calculator calc = new Calculator();
     	calc.setAccount(new Account("silver", 0, 4));
     	calc.run();
     	assertEquals(77.95 ,calc.totalCost(), 0.05);
     }
     
-    public void testNumberOfSilverLines2(){
+    public void testSilver0min5line(){
     	Calculator calc = new Calculator();
     	calc.setAccount(new Account("silver", 0, 5));
     	calc.run();
