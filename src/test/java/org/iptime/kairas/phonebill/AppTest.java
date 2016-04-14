@@ -118,9 +118,9 @@ public class AppTest
     public void testMakePlan(){
     	Plan plan = new Plan("Gold", 0, 0, 0, 0){};
     	assertEquals("Gold", plan.planType());
-    	assertEquals(0, plan.basicMonthlyRate());
-    	assertEquals(0, plan.ratePerAdditionalLine());
-    	assertEquals(0, plan.ratePerExcessMinute());
+    	assertEquals(0.0, plan.basicMonthlyRate());
+    	assertEquals(0.0, plan.ratePerAdditionalLine());
+    	assertEquals(0.0, plan.ratePerExcessMinute());
     	assertEquals(0, plan.includedMinutes());	
     	}
     
