@@ -30,6 +30,13 @@ public class AppTest
         return new TestSuite( AppTest.class );
     }
     
+    public void testFormular(){
+    	Calculator calc = new Calculator();
+    	calc.setAccount(new Account("gold", 0, 1));
+    	calc.run();
+    	assertTrue("49.95".equals(calc.totalCostFormular()));
+    }
+    
     public void testGoldMinuteOver1()
     {
     	Calculator calc = new Calculator();
