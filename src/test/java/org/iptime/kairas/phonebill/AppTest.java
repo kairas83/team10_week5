@@ -32,9 +32,9 @@ public class AppTest
     
     public void testFormular(){
     	Calculator calc = new Calculator();
-    	calc.setAccount(new Account("gold", 0, 1));
+    	calc.setAccount(new Account("gold", 1, 1));
     	calc.run();
-    	assertTrue("49.95".equals(calc.totalCostFormular()));
+    	assertEquals("49.95 + (0*14.5)", calc.totalCostFormular());
     }
     
     public void testGoldMinuteOver1()
