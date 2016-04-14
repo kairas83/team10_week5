@@ -30,6 +30,13 @@ public class AppTest
         return new TestSuite( AppTest.class );
     }
     
+    public void testFormular(){
+    	Calculator calc = new Calculator();
+    	calc.setAccount(new Account("gold", 1, 1));
+    	calc.run();
+    	assertEquals("49.95 + (0*14.5)", calc.totalCostFormular());
+    }
+    
     public void testGoldMinuteOver1()
     {
     	Calculator calc = new Calculator();
@@ -118,9 +125,9 @@ public class AppTest
     public void testMakePlan(){
     	Plan plan = new Plan("Gold", 0, 0, 0, 0){};
     	assertEquals("Gold", plan.planType());
-    	assertEquals(0, plan.basicMonthlyRate());
-    	assertEquals(0, plan.ratePerAdditionalLine());
-    	assertEquals(0, plan.ratePerExcessMinute());
+    	assertEquals(0.0, plan.basicMonthlyRate());
+    	assertEquals(0.0, plan.ratePerAdditionalLine());
+    	assertEquals(0.0, plan.ratePerExcessMinute());
     	assertEquals(0, plan.includedMinutes());	
     	}
     
@@ -135,11 +142,11 @@ public class AppTest
     
     public void testMakeSilverPlan(){ 
     	Silver silver = new Silver();
-    	assertEquals("Silver", silver.planType());
-    	assertEquals(29.95, silver.basicMonthlyRate());
-    	assertEquals(21.50, silver.ratePerAdditionalLine());
-    	assertEquals(0.54, silver.ratePerExcessMinute());
-    	assertEquals(500, silver.includedMinutes());	    	
+    	assertEquals(Silver.PLAN_TYPE, silver.planType());
+    	assertEquals(Silver.BASIC_MONTHLY_RATE, silver.basicMonthlyRate());
+    	assertEquals(Silver.RATE_PER_ADDITIONAL_LINE, silver.ratePerAdditionalLine());
+    	assertEquals(Silver.RATE_PER_EXCESS_MINUTE, silver.ratePerExcessMinute());
+    	assertEquals(Silver.INCLUDED_MINUTES, silver.includedMinutes());	    	
     }
     
     public void testAccount(){
