@@ -15,8 +15,9 @@ public class PhoneBill {
 
 	public String getBillForm() {
 		bill = new StringBuilder();
+		calc.setAccount(account);
 		calc.run();
-	
+
 		bill.append("\n----------------------------------------------------------------------------------------------------------------------------\n");
 		bill.append("|\tplan\t|\tMinutes Used\t|\tNumber of Lines\t|\tExpected Bill\t\t\t\t\n");
 		bill.append("----------------------------------------------------------------------------------------------------------------------------\n");
