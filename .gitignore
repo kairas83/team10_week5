@@ -1,3 +1,4 @@
+.swp
 .classpath
 .project
 .settings/
@@ -5,3 +6,4 @@
 .idea/
 /target/
 /bin/
+
